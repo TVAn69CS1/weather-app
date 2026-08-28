@@ -1,0 +1,104 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: linear-gradient(135deg, #74b9ff, #0984e3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #2d3436;
+}
+.weatherForm {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 10px; /* tao khoang cach giua cac hop trong form*/
+}
+.cityInput {
+  padding: 12px 20px;
+  border: 2px solid;
+  outline: none;
+  border-radius: 25px;
+  width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cityInput:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 4px 12px rgba(red, green, blue, alpha);
+}
+button[type="submit"] {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ffeaa7; /* Màu vàng nhạt nổi bật */
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+  background-color: #fdcb6e; /* Đậm màu hơn khi di chuột vào */
+  transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ nút lên */
+}
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+.display {
+  background: rgba(255, 255, 255, 0.85); /* Nền trắng trong suốt nhẹ */
+  backdrop-filter: blur(10px); /* Làm mờ phần nền phía sau */
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng tạo chiều sâu */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* 4. Chi tiết các thành phần hiển thị bên trong Card */
+.cityDisplay {
+  font-size: 28px;
+  margin: 0;
+  color: #2d3436;
+}
+
+.tempDisplay {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0984e3;
+}
+
+.humidityDisplay {
+  font-size: 16px;
+  color: #636e72;
+  margin: 0;
+}
+
+.descDisplay {
+  font-size: 18px;
+  font-style: italic;
+  text-transform: capitalize; /* Viết hoa chữ cái đầu */
+  margin: 0;
+}
+
+.weatherEmoji {
+  font-size: 64px; /* Phóng to icon thời tiết mặt trời/mây */
+  margin: 15px 0 0 0;
+}
+
+/* 5. CSS cho dòng thông báo lỗi */
+.errorDisplay {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d63031; /* Màu đỏ báo lỗi */
+  background-color: #fab1a0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  /* Mặc định ẩn đi, khi nào JS cần thì bật lại bằng display: block */
+}
